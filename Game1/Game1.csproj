@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C15D499A-8682-4B5D-B189-D2A308A13325}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Game1</RootNamespace>
+    <AssemblyName>Game1</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.UI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Sprite.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="GameObj.cs" />
+    <Compile Include="Star.cs" />
+    <Compile Include="Meteor.cs" />
+    <Compile Include="Saucer.cs" />
+    <Compile Include="Weapon.cs" />
+    <Compile Include="Claw.cs" />
+    <Compile Include="SonicMeow.cs" />
+    <Compile Include="HairBall.cs" />
+    <Compile Include="MenuDisplay.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+    <ShaderProgram Include="shaders\Sprite.fcg" />
+    <ShaderProgram Include="shaders\Sprite.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="shaders\" />
+    <Folder Include="assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\alphabet.png" />
+    <Content Include="assets\car.png" />
+    <Content Include="assets\cat.png" />
+    <Content Include="assets\elf1.png" />
+    <Content Include="assets\elf2.png" />
+    <Content Include="assets\enviroment_forest_evening.png" />
+    <Content Include="assets\game_over.png" />
+    <Content Include="assets\hairball ammo.png" />
+    <Content Include="assets\hairball.png" />
+    <Content Include="assets\house.png" />
+    <Content Include="assets\jinglebell.wav" />
+    <Content Include="assets\left_present.png" />
+    <Content Include="assets\meow ammo.png" />
+    <Content Include="assets\meow.png" />
+    <Content Include="assets\meteor.png" />
+    <Content Include="assets\music.mp3" />
+    <Content Include="assets\police.png" />
+    <Content Include="assets\right_present.png" />
+    <Content Include="assets\santa.png" />
+    <Content Include="assets\saucer.png" />
+    <Content Include="assets\scratch ammo.png" />
+    <Content Include="assets\scratch.png" />
+    <Content Include="assets\selector.png" />
+    <Content Include="assets\snow %282%29.jpg" />
+    <Content Include="assets\snow.jpg" />
+    <Content Include="assets\snow.png" />
+    <Content Include="assets\space.png" />
+    <Content Include="assets\star.png" />
+    <Content Include="assets\tree.png" />
+    <Content Include="assets\up_present.png" />
+  </ItemGroup>
+</Project>
